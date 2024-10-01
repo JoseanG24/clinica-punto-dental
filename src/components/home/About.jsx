@@ -90,15 +90,16 @@ const AboutSection = () => {
         </div>
 
         {/* Mapa optimizado para mobile */}
-        <div className="block md:hidden w-[90%] h-64 mb-5">
+        <div className="block md:hidden w-full h-64 mb-5">
           <h2 className="font-bold">Ubicación</h2>
-          <div className="relative w-[90%] h-full overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
-              className="absolute top-0 left-0 w-full h-full border-0"
-              style={{ border: 0 }}
-              loading="lazy"
-            ></iframe>
+          <div className="relative w-full h-full overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
+            className="w-full h-full"
+            style={{ border: 0 }}
+            // allowFullScreen=""
+            loading="lazy"
+          ></iframe>
           </div>
         </div>
 
