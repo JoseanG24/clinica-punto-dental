@@ -89,7 +89,7 @@ const AboutSection = () => {
           ></iframe>
         </div>
 
-        {/* Mapa optimizado para mobile */}
+        {/* Mapa optimizado para mobile
         <div className="block md:hidden w-full h-64 mb-12">
           <h2 className="font-bold">Ubicación</h2>
           <div className="relative w-full h-full overflow-hidden">
@@ -100,7 +100,7 @@ const AboutSection = () => {
               loading="lazy"
             ></iframe>
           </div>
-        </div>
+        </div> */}
 
         {/* Información de la Clínica */}
         <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pl-10 md:pr-7 bg-[#f3f3f3] py-20">
