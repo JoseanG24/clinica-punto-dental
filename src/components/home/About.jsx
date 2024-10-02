@@ -79,7 +79,7 @@ const AboutSection = () => {
     <section className="relative bg-gray-100 text-[#05192e] py-20">
       <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0">
         {/* Mapa para pantallas grandes */}
-        {/* <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky top-44 md:top-32 h-96 md:mb-12 overflow-x-hidden">
+        <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky top-44 md:top-44 h-96 md:mb-12 overflow-hidden">
           <h2 className="font-bold">Ubicación</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
@@ -88,39 +88,18 @@ const AboutSection = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-        </div> */}
+        </div>
 
-        {/* Mapa optimizado para mobile
+        {/* Mapa optimizado para mobile */}
         <div className="block md:hidden w-full h-64 mb-5">
-          <h2 className="font-bold">Ubicación</h2>
-          <div className="relative w-full h-full overflow-hidden">
-            <Image
-              src="/ubicacion.png"
-              alt="Ubicación en Google Maps"
-              width={600}
-              height={400}
-              className="w-full h-full object-cover rounded-lg"
-            />
-            <div className="">
-              <Link
-                href="https://maps.google.com/?q=14.522422,-90.471296" // Coordenadas de ejemplo
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline"
-              >
-                Abrir en Google Maps
-              </Link>
-              <Link
-                href="https://waze.com/ul?ll=14.522422,-90.471296&navigate=yes" // Coordenadas de ejemplo
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline"
-              >
-                Abrir en Waze
-              </Link>
-            </div>
-          </div>
-        </div> */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
+            className="w-full h-full overflow-x-hidden"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
 
         {/* Información de la Clínica */}
         <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pl-10 md:pr-7 bg-[#f3f3f3] py-20">
