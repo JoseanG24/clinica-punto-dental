@@ -1,6 +1,6 @@
 import HeroSection from "@/components/home/Hero";
 import AboutSection from "@/components/home/About";
-import Services from "@/components/home/Services";
+// import Services from "@/components/home/Services";
 import Benefits from "@/components/home/Benefits";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -40,13 +40,13 @@ const HomePage = () => {
         />
       </Head>
 
-      <div>
+      <div className="p-0 m-0 overflow-x-hidden">
         <HeroSection />
         <div id="nosotros">
           <AboutSection />
         </div>
         <div id="servicios"></div>
-        <Services />
+        {/* <Services /> */}
         <Benefits />
 
         <div id="cita">
