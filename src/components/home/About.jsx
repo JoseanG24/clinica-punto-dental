@@ -128,7 +128,7 @@ const AboutSection = () => {
 
           {/* Información de Contacto, Servicios y Dirección */}
           <div className="about-info space-y-4">
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
+            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
               Nuestros Servicios
             </h3>
             <ul className="list-disc list-inside mb-4 text-base md:text-lg">
@@ -139,7 +139,7 @@ const AboutSection = () => {
               <li>Periodoncia</li>
             </ul>
 
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
+            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
               Contacto
             </h3>
             <p className="mb-2 text-base md:text-lg">
@@ -149,14 +149,14 @@ const AboutSection = () => {
               <strong>Email:</strong> contacto@puntdental.com
             </p>
 
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
+            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
               Dirección
             </h3>
             <p className="mb-2 text-base md:text-lg">
               123 Calle Principal, Ciudad Dental, País.
             </p>
 
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
+            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
               Horario de Atención
             </h3>
             <p className="text-base md:text-lg">

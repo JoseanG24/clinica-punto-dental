@@ -1,6 +1,13 @@
 import HeroSection from "@/components/home/Hero";
 import AboutSection from "@/components/home/About";
+import Services from "@/components/home/Services";
+import Benefits from "@/components/home/Benefits";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const Appointment = dynamic(() => import("@/components/home/Appointment"), { ssr: false });
+const Personal = dynamic(() => import("@/components/home/Personal"), { ssr: false });
+const FAQSection = dynamic(() => import("@/components/home/FAQ"), { ssr: false });
 
 const HomePage = () => {
   return (
@@ -38,6 +45,17 @@ const HomePage = () => {
         <div id="nosotros">
           <AboutSection />
         </div>
+        <div id="servicios"></div>
+        <Services />
+        <Benefits />
+
+        <div id="cita">
+          <Appointment />
+        </div>
+        <Personal />
+        <div id="preguntas"></div>
+        <FAQSection />
+        <div id="contacto"></div>
       </div>
     </>
   );
