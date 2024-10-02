@@ -79,11 +79,11 @@ const AboutSection = () => {
     <section className="relative bg-gray-100 text-[#05192e] py-20">
       <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0">
         {/* Mapa para pantallas grandes */}
-        <div className="w-full md:ml-20 md:w-1/2 md:sticky top-44 md:top-32 h-96 md:mb-12">
+        <div className=" md:ml-20 md:w-1/2 md:sticky md:top-32 md:h-96 md:mb-12">
           <h2 className="font-bold">Ubicación</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
-            className="h-full"
+            className="md:w-full md:h-full"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
