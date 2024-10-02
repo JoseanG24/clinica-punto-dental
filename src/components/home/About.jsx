@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import Link from "next/link";
 
 // Registra ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -79,24 +78,25 @@ const AboutSection = () => {
     <section className="relative bg-gray-100 text-[#05192e] py-20">
       <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0">
         {/* Mapa para pantallas grandes */}
-        <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky top-44 md:top-44 h-96 md:mb-12 overflow-hidden">
+        <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky md:top-32 h-96 mb-12">
           <h2 className="font-bold">Ubicación</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
-            className="w-full h-full overflow-x-hidden"
+            className="w-full h-full"
             style={{ border: 0 }}
-            allowFullScreen=""
+            // allowFullScreen=""
             loading="lazy"
           ></iframe>
         </div>
 
         {/* Mapa optimizado para mobile */}
-        <div className="block md:hidden w-full h-64 mb-5">
+        <div className="block md:hidden w-full h-64 mb-12">
+          <h2 className="font-bold">Ubicación</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
-            className="w-full h-full overflow-x-hidden"
-          
-            allowFullScreen=""
+            className="w-full h-full"
+            style={{ border: 0 }}
+            // allowFullScreen=""
             loading="lazy"
           ></iframe>
         </div>
@@ -126,7 +126,7 @@ const AboutSection = () => {
 
           {/* Información de Contacto, Servicios y Dirección */}
           <div className="about-info space-y-4">
-            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
+            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
               Nuestros Servicios
             </h3>
             <ul className="list-disc list-inside mb-4 text-base md:text-lg">
@@ -137,7 +137,7 @@ const AboutSection = () => {
               <li>Periodoncia</li>
             </ul>
 
-            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
+            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
               Contacto
             </h3>
             <p className="mb-2 text-base md:text-lg">
@@ -147,14 +147,14 @@ const AboutSection = () => {
               <strong>Email:</strong> contacto@puntdental.com
             </p>
 
-            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
+            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
               Dirección
             </h3>
             <p className="mb-2 text-base md:text-lg">
               123 Calle Principal, Ciudad Dental, País.
             </p>
 
-            <h3 className="text-2xl font-bold md:text-4xl text-blue-900">
+            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
               Horario de Atención
             </h3>
             <p className="text-base md:text-lg">
