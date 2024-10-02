@@ -77,8 +77,7 @@ const AboutSection = () => {
 
   return (
     <section className="relative bg-gray-100 text-[#05192e] py-20">
-      <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0 overflow-x-hidden">
-        {/* Mapa para pantallas grandes */}
+      {/* <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0">
         <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky top-44 md:top-32 h-96 md:mb-12 overflow-x-hidden">
           <h2 className="font-bold">Ubicación</h2>
           <iframe
@@ -88,7 +87,7 @@ const AboutSection = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-        </div>
+        </div> */}
 
         {/* Mapa optimizado para mobile
         <div className="block md:hidden w-full h-64 mb-5">
