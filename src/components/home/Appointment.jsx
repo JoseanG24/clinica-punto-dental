@@ -1,11 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi";
-import { BsWhatsapp } from "react-icons/bs"; // Icono de WhatsApp
+import { FiArrowRight, FiPhone } from "react-icons/fi";
+import { BsWhatsapp } from "react-icons/bs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Registra ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const Appointment = () => {
@@ -57,24 +56,28 @@ const Appointment = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 py-36">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="appointment-title text-5xl font-bold mb-8 text-blue-950">
+    <section className="bg-white py-24">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="appointment-title py-4 text-4xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 tracking-wide drop-shadow-md sm:text-5xl md:text-6xl">
           Agenda tu Cita
         </h2>
-        <p className="appointment-description font-bold text-center text-xl text-gray-700 mb-4">
-          Puedes agendar una cita llamándonos al teléfono o escribiendo por
-          WhatsApp.
+        <p className="appointment-description text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Nuestro equipo está listo para atenderte. Agenda tu cita fácilmente por
+          teléfono o WhatsApp y comienza el camino hacia una sonrisa perfecta.
         </p>
 
         {/* Botones */}
-        <div className="appointment-buttons">
+        <div className="appointment-buttons flex flex-col sm:flex-row justify-center gap-6 items-center">
           {/* Botón para WhatsApp */}
           <DotExpandButton />
           {/* Botón de llamada */}
-          <button className="appointment-description mt-6 pointer-events-none inline-block text-lg text-white bg-blue-700 rounded-full py-4 px-6 mb-12 transition-transform duration-300 ease-in-out hover:bg-blue-800 hover:scale-105 shadow-lg">
-            <strong>Teléfono:</strong> +502 5208-4159
-          </button>
+          <a
+            href="tel:+50252084159"
+            className="group flex h-18 items-center gap-3 rounded-full bg-blue-600 py-4 px-6 text-white text-lg font-semibold shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105"
+          >
+            <FiPhone className="mr-2 text-xl" />
+            Llamar al +502 5208-4159
+          </a>
         </div>
       </div>
     </section>
@@ -83,22 +86,16 @@ const Appointment = () => {
 
 const DotExpandButton = () => {
   return (
-    <div className="grid place-content-center mt-10">
-      <a
-        href="https://wa.me/50252084159" // Coloca aquí el número de teléfono de WhatsApp
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex h-12 items-center gap-2 rounded-full bg-green-500 py-8 md:py-auto pl-4 pr-5 text-white transition-all duration-300 ease-in-out hover:bg-green-700"
-      >
-        <span className="text-lg">
-          <BsWhatsapp />
-        </span>
-        <span>Escríbenos por WhatsApp</span>
-        <span className="rounded-full bg-green-500 p-1 text-sm transition-colors duration-300 group-hover:bg-green-500">
-          <FiArrowRight className="transition-all duration-300 group-hover:text-lg group-hover:text-white group-active:-rotate-45" />
-        </span>
-      </a>
-    </div>
+    <a
+      href="https://wa.me/50252084159"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex h-18 items-center gap-3 rounded-full bg-green-500 py-4 px-6 text-white text-lg font-semibold shadow-lg transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105"
+    >
+      <BsWhatsapp className="text-2xl" />
+      Escríbenos por WhatsApp
+      <FiArrowRight className="text-lg transition-transform duration-300 group-hover:translate-x-2" />
+    </a>
   );
 };
 

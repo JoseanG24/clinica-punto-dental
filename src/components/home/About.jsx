@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
-// Registra ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
@@ -75,38 +74,26 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-gray-100 text-[#05192e] py-20">
+    <section className="relative bg-[#05192e] text-[#f3f3f3] py-20">
       <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0">
         {/* Mapa para pantallas grandes */}
         <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky md:top-32 h-96 mb-12">
-          <h2 className="font-bold">Ubicación</h2>
+          <h2 className="font-bold text-lg bg-[#1e3a8a] text-white px-4 py-2 mb-2 rounded-md inline-block">
+            Ubicación
+          </h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
-            className="w-full h-full"
+            className="w-full h-full rounded-lg shadow-lg"
             style={{ border: 0 }}
-            // allowFullScreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-
-        {/* Mapa optimizado para mobile */}
-        <div className="block md:hidden w-full h-64 mb-12">
-          <h2 className="font-bold">Ubicación</h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
-            className="w-full h-full"
-            style={{ border: 0 }}
-            // allowFullScreen=""
             loading="lazy"
           ></iframe>
         </div>
 
         {/* Información de la Clínica */}
-        <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pl-10 md:pr-7 bg-[#f3f3f3] py-20">
-          <h2 className="about-title text-3xl md:text-4xl font-bold mb-4">
+        <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pl-10 md:pr-7 py-10 rounded-lg shadow-lg">
+          <h2 className="about-title text-3xl md:text-4xl font-bold mb-4 bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
             Conócenos
           </h2>
-          {/* Imagen de la Clínica o del Equipo */}
           <div className="mb-10 mt-1 w-full">
             <Image
               src="/images/imgclinica1.png"
@@ -123,10 +110,8 @@ const AboutSection = () => {
             la calidad de vida de nuestros pacientes a través de servicios
             dentales excepcionales.
           </p>
-
-          {/* Información de Contacto, Servicios y Dirección */}
-          <div className="about-info space-y-4">
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
+          <div className="about-info space-y-6">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
               Nuestros Servicios
             </h3>
             <ul className="list-disc list-inside mb-4 text-base md:text-lg">
@@ -137,24 +122,17 @@ const AboutSection = () => {
               <li>Periodoncia</li>
             </ul>
 
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
               Contacto
             </h3>
-            <p className="mb-2 text-base md:text-lg">
+            <p className="text-base md:text-lg">
               <strong>Teléfono:</strong> +1 123-456-7890
             </p>
-            <p className="mb-2 text-base md:text-lg">
-              <strong>Email:</strong> contacto@puntdental.com
+            <p className="text-base md:text-lg">
+              <strong>Email:</strong> contacto@puntodental.com
             </p>
 
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
-              Dirección
-            </h3>
-            <p className="mb-2 text-base md:text-lg">
-              123 Calle Principal, Ciudad Dental, País.
-            </p>
-
-            <h3 className="text-xl md:text-4xl font-semibold text-blue-900">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
               Horario de Atención
             </h3>
             <p className="text-base md:text-lg">

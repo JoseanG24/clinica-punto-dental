@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Link from "next/link";
+// import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,33 +11,43 @@ const services = [
   {
     id: "odontologia-general",
     title: "Odontología General",
-    description: "Cuidado dental preventivo y tratamientos para mantener tu boca sana.",
-    image: "https://plus.unsplash.com/premium_photo-1674179075488-7bbe91dba99a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b2RvbnRvbG9naWElMjBnZW5lcmFsfGVufDB8fDB8fHww",
+    description:
+      "Cuidado dental preventivo y tratamientos para mantener tu boca sana.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1674179075488-7bbe91dba99a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b2RvbnRvbG9naWElMjBnZW5lcmFsfGVufDB8fDB8fHww",
   },
   {
     id: "ortodoncia",
     title: "Ortodoncia",
-    description: "Corrección de maloclusiones y alineación de los dientes para una sonrisa perfecta.",
-    image: "https://images.unsplash.com/photo-1598531228433-d9f0cb960816?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG9ydG9kb25jaWF8ZW58MHx8MHx8fDA%3D",
+    description:
+      "Corrección de maloclusiones y alineación de los dientes para una sonrisa perfecta.",
+    image:
+      "https://images.unsplash.com/photo-1598531228433-d9f0cb960816?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG9ydG9kb25jaWF8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: "implantes-dentales",
     title: "Implantes Dentales",
-    description: "Reemplazo de dientes perdidos con implantes duraderos y de aspecto natural.",
-    image: "https://images.unsplash.com/photo-1684607632829-1e5bf4f21dab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1wbGFudGVzJTIwZGVudGFsZXxlbnwwfHwwfHx8MA%3D%3D",
+    description:
+      "Reemplazo de dientes perdidos con implantes duraderos y de aspecto natural.",
+    image:
+      "https://images.unsplash.com/photo-1684607632829-1e5bf4f21dab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1wbGFudGVzJTIwZGVudGFsZXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     id: "estetica-dental",
     title: "Estética Dental",
-    description: "Mejora la apariencia de tu sonrisa con tratamientos estéticos personalizados.",
-    image: "https://plus.unsplash.com/premium_photo-1702598988008-b60cf858cb78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZXN0ZXRpY2ElMjBkZW50YWx8ZW58MHx8MHx8fDA%3D",
+    description:
+      "Mejora la apariencia de tu sonrisa con tratamientos estéticos personalizados.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1702598988008-b60cf858cb78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZXN0ZXRpY2ElMjBkZW50YWx8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: "periodoncia",
     title: "Periodoncia",
-    description: "Tratamientos especializados para las encías y el soporte de los dientes.",
-    image: "https://plus.unsplash.com/premium_photo-1674998805052-23ea88091da2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyaWRvbnRpc3R8ZW58MHx8MHx8fDA%3D",
-  }
+    description:
+      "Tratamientos especializados para las encías y el soporte de los dientes.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1674998805052-23ea88091da2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyaWRvbnRpc3R8ZW58MHx8MHx8fDA%3D",
+  },
 ];
 
 const ServicesGrid = () => {
@@ -78,20 +88,27 @@ const ServicesGrid = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {services.map((service, index) => (
-            <Link href={`/servicios/${service.id}`} key={service.id} passHref>
+            // <Link href={`/servicios/${service.id}`} key={service.id} passHref>
               <button
                 ref={addToRefs}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 cursor-pointer"
+                className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-default   hover:shadow-2xl"
               >
-                <div className="w-full h-48 bg-center bg-cover" style={{ backgroundImage: `url(${service.image})` }}>
+                <div
+                  className="w-full h-48 bg-center bg-cover transition-opacity duration-300 hover:opacity-80"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                >
                   {/* Optional overlay for text readability */}
                   <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-end p-4">
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    <p className="text-sm text-gray-300">{service.description}</p>
+                    <h3 className="text-xl font-bold text-white">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-300">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </button>
-            </Link>
+            // </Link>
           ))}
         </div>
       </div>

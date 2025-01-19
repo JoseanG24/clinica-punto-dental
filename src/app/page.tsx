@@ -7,6 +7,7 @@ import HeroSection from "@/components/home/Hero";
 import AboutSection from "@/components/home/About";
 import ServicesSection from "@/components/home/Services";
 import BenefitsSection from "@/components/home/Benefits";
+// import WorksSection from "@/components/home/Work";
 
 // Carga diferida para componentes que no son críticos
 const Appointment = dynamic(() => import("@/components/home/Appointment"), { ssr: false });
@@ -43,6 +44,7 @@ const HomePage = () => {
         <AboutSection />
         <div id="servicios"></div>
         <ServicesSection />
+        {/* <WorksSection /> */}
         <BenefitsSection />
 
         {/* Estos componentes se cargan diferidos para mejorar el rendimiento */}

@@ -1,114 +1,91 @@
 "use client";
-import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
-import Image from "next/image"; // Importamos el componente para usar el logo.
-
-gsap.registerPlugin(ScrollTrigger);
+import Image from "next/image";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Footer = () => {
-  useEffect(() => {
-    // Animación con GSAP para el footer
-    gsap.fromTo(
-      ".footer",
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".footer",
-          start: "top 90%",
-        },
-      }
-    );
-  }, []);
-
   return (
-    <footer className="footer bg-gray-900 text-gray-200 py-12">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        {/* Sección del Logo */}
-        <div className="footer-logo">
-          <Image
-            src="/logos/logo-removebg-preview.png" // Reemplaza por la ruta correcta a tu logo
-            alt="Punt Dental Logo"
-            width={150}
-            height={150}
-            className="mb-4 bg-white rounded-xl"
-          />
-          <p className="text-xl w-[60%] text-gray-400">Tu clínica dental de confianza.</p>
+    <footer className="bg-[#121212] text-white py-10">
+      <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Logo y descripción */}
+        <div className="flex flex-col items-start">
+          <Image src="/logos/logo-removebg-preview2.png" alt="Logo" className="w-64 mb-4" width={300} height={300} />
+          <p className="text-sm text-gray-400">
+            Creando soluciones digitales innovadoras para impulsar tu negocio en
+            el mundo online. Tu éxito es nuestro objetivo.
+          </p>
         </div>
 
-        {/* Sección de Navegación */}
-        <div className="footer-nav">
-          <h3 className="text-lg font-bold mb-4">Navegación</h3>
-          <ul className="space-y-2">
+        {/* Enlaces rápidos */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+          <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <Link href="/" className="hover:text-gray-400 transition-colors">Inicio</Link>
+              <a href="#about" className="hover:underline">
+                Sobre Nosotros
+              </a>
             </li>
             <li>
-              <Link href="/about" className="hover:text-gray-400 transition-colors">Nosotros</Link>
+              <a href="#services" className="hover:underline">
+                Servicios
+              </a>
             </li>
             <li>
-              <Link href="/services" className="hover:text-gray-400 transition-colors">Servicios</Link>
+              <a href="#portfolio" className="hover:underline">
+                Portafolio
+              </a>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-gray-400 transition-colors">Contacto</Link>
+              <a href="#contact" className="hover:underline">
+                Contacto
+              </a>
             </li>
           </ul>
         </div>
 
-        {/* Sección de Servicios */}
-        <div className="footer-services">
-          <h3 className="text-lg font-bold mb-4">Nuestros Servicios</h3>
-          <ul className="space-y-2">
+        {/* Contacto y redes sociales */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Contáctanos</h3>
+          <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <Link href="/servicios/odontologia-general" className="hover:text-gray-400 transition-colors">Odontología General</Link>
+              <span className="font-bold">Teléfono:</span> +1 123-456-7890
             </li>
             <li>
-              <Link href="/servicios/ortodoncia" className="hover:text-gray-400 transition-colors">Ortodoncia</Link>
+              <span className="font-bold">Email:</span> contacto@ejemplo.com
             </li>
             <li>
-              <Link href="/servicios/implantes-dentales" className="hover:text-gray-400 transition-colors">Implantes Dentales</Link>
-            </li>
-            <li>
-              <Link href="/servicios/estetica-dental" className="hover:text-gray-400 transition-colors">Estética Dental</Link>
-            </li>
-            <li>
-              <Link href="/servicios/periodoncia" className="hover:text-gray-400 transition-colors">Periodoncia</Link>
+              <span className="font-bold">Dirección:</span> 123 Calle Principal,
+              Ciudad Digital.
             </li>
           </ul>
+          <div className="mt-6 flex space-x-4">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center bg-blue-600 rounded-full hover:bg-blue-500 transition"
+            >
+              <FaFacebookF className="text-white text-lg" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-pink-500 to-orange-400 rounded-full hover:opacity-80 transition"
+            >
+              <FaInstagram className="text-white text-lg" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        {/* Sección de Contacto */}
-        <div className="footer-contact">
-          <h3 className="text-lg font-bold mb-4">Contacto</h3>
-          <p className="mb-2">
-            <strong>Teléfono:</strong> +1 123-456-7890
-          </p>
-          <p className="mb-2">
-            <strong>Email:</strong> contacto@puntdental.com
-          </p>
-          <p className="mb-2">
-            <strong>Dirección:</strong> 123 Calle Principal, Ciudad Dental, País.
-          </p>
-          <p>
-            <strong>Horario de Atención:</strong> <br />
-            Lunes a Viernes: 9:00 AM - 6:00 PM <br />
-            Sábado: 9:00 AM - 2:00 PM <br />
-            Domingo: Cerrado
-          </p>
-        </div>
-
-        {/* Derechos de Autor */}
-        <div className="footer-copyright md:col-span-4 text-center mt-8">
-          <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Punt Dental. Todos los derechos reservados.
-          </p>
-        </div>
+      {/* Footer inferior */}
+      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+        © 2025 Tu Empresa. Todos los derechos reservados.
       </div>
     </footer>
   );
