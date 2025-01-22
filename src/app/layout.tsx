@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: `%s | Clínica Punto Dental`,
   },
   description:
-    "Clínica dental en Carretera a El Salvador. Ofrecemos servicios de odontología general, ortodoncia, implantes dentales, estética dental y periodoncia en Guatemala.",
+    "Clínica dental en Carretera a El Salvador. Ofrecemos servicios de odontología general, ortodoncia, implantes dentales, estética dental y periodoncia.",
   openGraph: {
     title: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
     description:
