@@ -53,7 +53,6 @@ const Navbar = () => {
         <NavLink href="#nosotros">Nosotros</NavLink>
         <NavLink href="#servicios">Servicios</NavLink>
         <NavLink href="#preguntas">Preguntas Frecuentes</NavLink>
-        <NavLink href="#contacto">Contacto</NavLink>
         <JoinButton /> {/* Botón en desktop */}
       </div>
 
@@ -72,9 +71,6 @@ const Navbar = () => {
           </NavLink>
           <NavLink href="/services" onClick={toggleMenu}>
             Servicios
-          </NavLink>
-          <NavLink href="/contact" onClick={toggleMenu}>
-            Contacto
           </NavLink>
           <JoinButton /> {/* Botón en menú desplegable en mobile */}
         </motion.div>

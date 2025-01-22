@@ -79,7 +79,7 @@ const AboutSection = () => {
     <section className="relative bg-[#05192e] text-[#f3f3f3] py-20">
       <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0">
         {/* Mapa para pantallas grandes */}
-        <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky md:top-32 h-96 mb-12">
+        <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky md:top-44 h-96 mb-12">
           <h2 className="font-bold text-lg bg-[#1e3a8a] text-white px-4 py-2 mb-2 rounded-md inline-block">
             Ubicación
           </h2>

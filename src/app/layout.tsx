@@ -6,18 +6,35 @@ import Navbar from "@/components/helper/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Metadata para SEO
 export const metadata: Metadata = {
-  title: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
-  description: "Clínica dental en Carretera a El Salvador. Ofrecemos servicios de odontología general, ortodoncia, implantes dentales, estética dental y periodoncia en Guatemala.",
-  keywords: "Dentista Carretera a El Salvador, Dentista Guatemala, Clínica dental Carretera a El Salvador, Clínica dental Guatemala",
+  metadataBase: new URL("https://puntodentalguate.com"),
+  keywords: [
+    "Clínica dental",
+    "Clínica dental Carretera a El Salvador",
+    "Dentista Carretera a El Salvador",
+    "Clínica dental Guatemala",
+    "Odontología en Guatemala",
+    "Ortodoncia Guatemala",
+    "Implantes dentales Guatemala",
+    "Estética dental Guatemala",
+    "Periodoncia Guatemala"
+  ],
+  title: {
+    default: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
+    template: `%s | Clínica Punto Dental`,
+  },
+  description:
+    "Clínica dental en Carretera a El Salvador. Ofrecemos servicios de odontología general, ortodoncia, implantes dentales, estética dental y periodoncia en Guatemala.",
   openGraph: {
     title: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
-    description: "Clínica dental en Carretera a El Salvador que ofrece servicios de odontología general, ortodoncia, implantes dentales, estética dental y periodoncia.",
-    url: "https://tudominio.com", // Reemplaza con tu dominio real
+    description:
+      "Clínica dental en Carretera a El Salvador que ofrece servicios de odontología general, ortodoncia, implantes dentales, estética dental y periodoncia.",
+    url: "https://puntodentalguate.com",
     siteName: "Clínica Punto Dental",
     images: [
       {
-        url: "https://tudominio.com/imagen-clinica.jpg", // Imagen destacada para compartir en redes
+        url: "https://puntodentalguate.com/imagen-clinica.jpg",
         width: 800,
         height: 600,
         alt: "Clínica Punto Dental en Carretera a El Salvador",
@@ -26,12 +43,13 @@ export const metadata: Metadata = {
     locale: "es_GT",
     type: "website",
   },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
-  //   description: "Clínica dental en Carretera a El Salvador que ofrece odontología general, ortodoncia, implantes dentales, y estética dental.",
-  //   image: "https://tudominio.com/imagen-clinica.jpg", // Imagen para Twitter Cards
-  // },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
+    description:
+      "Clínica dental en Carretera a El Salvador que ofrece odontología general, ortodoncia, implantes dentales, y estética dental.",
+    images: ["https://puntodentalguate.com/imagen-clinica.jpg"],
+  },
 };
 
 export default function RootLayout({
