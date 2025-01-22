@@ -62,7 +62,7 @@ const Appointment = () => {
           Agenda tu Cita
         </h2>
         <p className="appointment-description text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Nuestro equipo está listo para atenderte. Agenda tu cita fácilmente por
+          Estamos listos para atenderte. Agenda tu cita fácilmente por
           teléfono o WhatsApp y comienza el camino hacia una sonrisa perfecta.
         </p>
 

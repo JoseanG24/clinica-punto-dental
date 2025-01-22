@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+// Iconos
+import { FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,11 +106,13 @@ const AboutSection = () => {
             />
           </div>
           <p className="about-description text-base md:text-lg mb-6">
-            Somos una clínica dental dedicada a ofrecer un cuidado dental de la
-            más alta calidad con un enfoque en la comodidad y satisfacción de
-            nuestros pacientes. Nuestra misión es transformar sonrisas y mejorar
-            la calidad de vida de nuestros pacientes a través de servicios
-            dentales excepcionales.
+            Con más de 20 años de experiencia, enfocamos nuestra práctica en
+            brindar tratamientos odontológicos avanzados y un trato cercano,
+            siempre priorizando la comodidad y satisfacción de nuestros
+            pacientes. Nuestro equipo se mantiene en constante actualización a
+            través de cursos y programas especializados para ofrecer aún más
+            servicios con la más alta calidad. Nuestro compromiso es mejorar tu
+            salud bucal y brindarte la mejor experiencia posible.
           </p>
           <div className="about-info space-y-6">
             <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
@@ -122,24 +126,30 @@ const AboutSection = () => {
               <li>Periodoncia</li>
             </ul>
 
-            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md flex items-center gap-2">
               Contacto
             </h3>
-            <p className="text-base md:text-lg">
-              <strong>Teléfono:</strong> +1 123-456-7890
+            <p className="text-base md:text-lg flex items-center gap-2">
+              <FaPhoneAlt />
+              <strong>Teléfono:</strong> +502 5208 4159
             </p>
-            <p className="text-base md:text-lg">
-              <strong>Email:</strong> contacto@puntodental.com
+            <p className="text-base md:text-lg flex items-center gap-2">
+              <FaEnvelope />
+              <strong>Email:</strong> puntodentalgt@gmail.com
             </p>
 
-            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md flex items-center gap-2">
               Horario de Atención
             </h3>
-            <p className="text-base md:text-lg">
-              Lunes a Viernes: 9:00 AM - 6:00 PM
+            <p className="text-base md:text-lg font-semibold flex items-center gap-2">
+              <FaClock /> Lunes a Viernes: 9:00 AM - 6:00 PM
             </p>
-            <p className="text-base md:text-lg">Sábado: 9:00 AM - 2:00 PM</p>
-            <p className="text-base md:text-lg">Domingo: Cerrado</p>
+            <p className="text-base md:text-lg font-semibold flex items-center gap-2">
+              <FaClock /> Sábado: 9:00 AM - 2:00 PM
+            </p>
+            <p className="text-base md:text-lg font-semibold flex items-center gap-2">
+              <FaClock /> Domingo: Cerrado
+            </p>
           </div>
         </div>
       </div>

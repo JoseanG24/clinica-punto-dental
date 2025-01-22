@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CheckCircle, Shield, Heart, Smile } from "lucide-react";
 import Wave1 from "@/components/helper/Wave1";
 
-// Registra el plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const BenefitsSection = () => {
@@ -65,27 +64,27 @@ const BenefitsSection = () => {
 
   const benefits = [
     {
-      title: "Tecnología de vanguardia",
+      title: "Tecnología Avanzada",
       description:
-        "Utilizamos los últimos avances en tecnología dental para garantizar tratamientos de la más alta calidad.",
+        "Nos mantenemos al día con los últimos avances en equipos y técnicas dentales para ofrecer resultados confiables en cada tratamiento.",
       icon: <CheckCircle className="benefit-icon w-8 h-8 text-blue-600" />,
     },
     {
-      title: "Profesionales experimentados",
+      title: "Más de 20 Años de Experiencia",
       description:
-        "Nuestro equipo está compuesto por dentistas altamente calificados con años de experiencia en el campo.",
+        "Nuestra amplia experiencia y constante formación respaldan la excelencia y seguridad que brindamos a cada paciente.",
       icon: <Shield className="benefit-icon w-8 h-8 text-blue-600" />,
     },
     {
-      title: "Atención personalizada",
+      title: "Cuidado Cercano y Personalizado",
       description:
-        "Cada paciente es único, por lo que ofrecemos un enfoque personalizado para cada tratamiento.",
+        "Diseñamos planes de tratamiento adaptados a tus necesidades, garantizando una atención especializada y humana.",
       icon: <Heart className="benefit-icon w-8 h-8 text-blue-600" />,
     },
     {
-      title: "Ambiente cómodo",
+      title: "Entorno Cómodo",
       description:
-        "Nuestras instalaciones están diseñadas para ofrecer un ambiente relajante y cómodo.",
+        "Nuestras instalaciones están pensadas para ofrecer un ambiente relajante y acogedor, cuidando tu bienestar en cada visita.",
       icon: <Smile className="benefit-icon w-8 h-8 text-blue-600" />,
     },
   ];
@@ -109,7 +108,9 @@ const BenefitsSection = () => {
                   {benefit.title}
                 </h3>
               </div>
-              <p className="text-sm sm:text-base text-gray-600">{benefit.description}</p>
+              <p className="text-sm sm:text-base text-gray-600">
+                {benefit.description}
+              </p>
               <div className="absolute bottom-0 left-0 right-0 h-2 bg-blue-900 rounded-b-xl shadow-xl"></div>
             </div>
           ))}

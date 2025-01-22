@@ -1,11 +1,6 @@
 "use client";
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -13,34 +8,46 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo y descripción */}
         <div className="flex flex-col items-start">
-          <Image src="/logos/logo-removebg-preview2.png" alt="Logo" className="w-64 mb-4" width={300} height={300} />
+          <Image
+            src="/logos/logo-removebg-preview2.png"
+            alt="Logo"
+            className="w-64 mb-4"
+            width={300}
+            height={300}
+          />
           <p className="text-sm text-gray-400">
-            Creando soluciones digitales innovadoras para impulsar tu negocio en
-            el mundo online. Tu éxito es nuestro objetivo.
+            Con más de 20 años de experiencia, ofrecemos servicios dentales de
+            calidad para garantizar tu bienestar oral. Tu sonrisa es nuestra
+            prioridad.
           </p>
         </div>
 
-        {/* Enlaces rápidos */}
+        {/* Enlaces (los mismos del Navbar) */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+          <h3 className="text-xl font-semibold mb-4">Enlaces</h3>
           <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <a href="#about" className="hover:underline">
-                Sobre Nosotros
+              <a href="/" className="hover:underline">
+                Inicio
               </a>
             </li>
             <li>
-              <a href="#services" className="hover:underline">
+              <a href="#nosotros" className="hover:underline">
+                Nosotros
+              </a>
+            </li>
+            <li>
+              <a href="#servicios" className="hover:underline">
                 Servicios
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="hover:underline">
-                Portafolio
+              <a href="#preguntas" className="hover:underline">
+                Preguntas Frecuentes
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:underline">
+              <a href="#contacto" className="hover:underline">
                 Contacto
               </a>
             </li>
@@ -52,14 +59,14 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Contáctanos</h3>
           <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <span className="font-bold">Teléfono:</span> +1 123-456-7890
+              <span className="font-bold">Teléfono:</span> +502 5208 4159
             </li>
             <li>
-              <span className="font-bold">Email:</span> contacto@ejemplo.com
+              <span className="font-bold">Email:</span> puntodentalgt@gmail.com
             </li>
             <li>
-              <span className="font-bold">Dirección:</span> 123 Calle Principal,
-              Ciudad Digital.
+              <span className="font-bold">Dirección:</span> Km 19.5 Carretera a
+              El Salvador, Tecniscan Plaza Minuto, Clínica 6 Ciudad Digital
             </li>
           </ul>
           <div className="mt-6 flex space-x-4">
@@ -85,7 +92,7 @@ const Footer = () => {
 
       {/* Footer inferior */}
       <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-        © 2025 Tu Empresa. Todos los derechos reservados.
+        © 2025 Clínica Punto Dental. Todos los derechos reservados.
       </div>
     </footer>
   );
