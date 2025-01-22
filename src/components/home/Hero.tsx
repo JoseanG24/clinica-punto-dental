@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import Image from "next/image";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -15,40 +14,39 @@ const HeroSection = () => {
   return (
     <>
       {/* Sección visible solo en móviles */}
-      <section className="md:hidden hero-section pt-44 bg-white flex flex-col items-center min-h-screen">
-        <div className="container mx-auto p-5">
-          <div className="text-gray-800 hero-content text-center max-w-xl">
-            <h1 className="text-4xl text-left font-bold mb-4">
-              Tu Sonrisa Perfecta Empieza Aquí
-            </h1>
-            <Image
-              src="/images/fondoprueba1.webp"
-              alt="Imagen Hero"
-              width={600}
-              height={400}
-              className="w-full mb-4 shadow-lg"
-            />
-            <p className="text-lg mb-6 text-left">
-              Usamos tecnología avanzada y tratamientos personalizados para
-              cuidar tu sonrisa y fortalecer tu confianza.
-            </p>
-            <a
-              href="#contact"
-              className="inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg transition-transform hover:scale-110 hover:bg-blue-700"
-            >
-              Agenda tu primera consulta gratis hoy
-            </a>
-          </div>
+      <section
+        className="md:hidden hero-section pt-44 bg-cover bg-center min-h-screen flex flex-col items-center"
+        style={{ backgroundImage: "url('/images/heromobile.jpg')" }}
+      >
+        <div className="container mx-auto p-5 bg-black bg-opacity-40 text-white text-center max-w-xl shadow-lg">
+          <h1 className="text-4xl text-left font-bold mb-4">
+            Tu Sonrisa Perfecta Empieza Aquí
+          </h1>
+          <p className="text-lg mb-6 text-left">
+            +20 años cuidando tu sonrisa
+          </p>
+          <a
+            href="#contact"
+            className="inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg transition-transform hover:scale-110 hover:bg-blue-700"
+          >
+            Agenda tu primera cita
+          </a>
         </div>
       </section>
 
       {/* Sección visible solo en tabletas y escritorios */}
-      <section className="hidden px-20 md:flex hero-section relative bg-cover bg-center min-h-screen items-center">
+      <section
+        className="hidden px-20 md:flex hero-section relative bg-cover bg-center min-h-screen items-center"
+        style={{ backgroundImage: "url('/images/fondoprueba1.webp')" }}
+      >
         {/* Imagen de fondo con filtro oscuro */}
         <div className="absolute inset-0">
           <div
-            className="w-full h-full bg-[url('/images/fondoprueba1.webp')] bg-cover bg-center"
-            style={{ filter: 'brightness(0.4)' }}
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/images/fondoprueba1.webp')",
+              filter: "brightness(0.4)",
+            }}
           />
           <div className="absolute inset-0 bg-black opacity-5"></div>
         </div>
