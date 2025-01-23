@@ -22,9 +22,7 @@ const HeroSection = () => {
           <h1 className="text-4xl text-left font-bold mb-4">
             Tu Sonrisa Perfecta Empieza Aquí
           </h1>
-          <p className="text-lg mb-6 text-left">
-            +20 años cuidando tu sonrisa
-          </p>
+          <p className="text-lg mb-6 text-left">+20 años cuidando tu sonrisa</p>
           <a
             href="https://wa.me/50252084159"
             className="inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg transition-transform hover:scale-110 hover:bg-blue-700"
@@ -60,7 +58,7 @@ const HeroSection = () => {
               Más de 20 años de experiencia +
             </p>
             <a
-              href="#contact"
+              href="https://wa.me/50252084159"
               className="inline-block px-8 py-4 rounded-xl bg-blue-500 text-white font-bold shadow-lg transition-transform hover:scale-110 hover:bg-blue-700"
             >
               Agenda tu primera consulta gratis hoy
