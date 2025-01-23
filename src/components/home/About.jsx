@@ -142,10 +142,10 @@ const AboutSection = () => {
               Horario de Atención
             </h3>
             <p className="text-base md:text-lg font-semibold flex items-center gap-2">
-              <FaClock /> Lunes a Viernes: 9:00 AM - 6:00 PM
+              <FaClock /> Lunes a Viernes: 8:30 AM - 6:00 PM
             </p>
             <p className="text-base md:text-lg font-semibold flex items-center gap-2">
-              <FaClock /> Sábado: 9:00 AM - 2:00 PM
+              <FaClock /> Sábado: 9:00 AM - 12:00 PM
             </p>
             <p className="text-base md:text-lg font-semibold flex items-center gap-2">
               <FaClock /> Domingo: Cerrado

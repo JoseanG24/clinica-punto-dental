@@ -33,8 +33,8 @@ const HomePage = () => {
           property="og:description"
           content="Ofrecemos servicios dentales como odontología general, ortodoncia, estética dental e implantes en Carretera a El Salvador, Guatemala."
         />
-        <meta property="og:url" content="https://tudominio.com" />
-        <meta property="og:image" content="https://tudominio.com/imagen-clinica.jpg" />
+        <meta property="og:url" content="https://puntodentalguate.com" />
+        <meta property="og:image" content="https://puntodentalguate/logos/iconlogo.jpg" />
       </Head>
 
       <div className="p-0 m-0 overflow-x-hidden md:overflow-x-visible">

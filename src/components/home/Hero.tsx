@@ -26,7 +26,7 @@ const HeroSection = () => {
             +20 años cuidando tu sonrisa
           </p>
           <a
-            href="#contact"
+            href="https://wa.me/50252084159"
             className="inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg transition-transform hover:scale-110 hover:bg-blue-700"
           >
             Agenda tu primera cita
