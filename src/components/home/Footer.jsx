@@ -14,6 +14,7 @@ const Footer = () => {
             className="w-64 mb-4"
             width={300}
             height={300}
+            loading="lazy"
           />
           <p className="text-sm text-gray-400">
             Con más de 20 años de experiencia, ofrecemos servicios dentales de

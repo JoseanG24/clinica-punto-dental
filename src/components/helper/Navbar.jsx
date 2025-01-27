@@ -86,6 +86,7 @@ const Logo = () => {
       alt="Clínica Punto Dental"
       width={160}
       height={160}
+      loading="lazy"
     />
   );
 };

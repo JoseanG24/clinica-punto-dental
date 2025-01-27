@@ -90,6 +90,7 @@ export default function ServiceDetailPage({ params }) {
                     width={400}
                     height={300}
                     className="rounded-lg shadow-lg object-cover"
+                    loading="lazy"
                   />
                 </div>
               ))}

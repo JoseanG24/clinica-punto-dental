@@ -134,7 +134,7 @@ const AboutSection = () => {
               <li>Periodoncia</li>
             </ul>
 
-            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md flex items-center gap-2">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md items-center gap-2">
               Contacto
             </h3>
             <p className="text-base md:text-lg flex items-center gap-2">
