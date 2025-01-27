@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/home/Footer";
 import Navbar from "@/components/helper/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     "Ortodoncia Guatemala",
     "Implantes dentales Guatemala",
     "Estética dental Guatemala",
-    "Periodoncia Guatemala"
+    "Periodoncia Guatemala",
   ],
   title: {
     default: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
@@ -63,6 +64,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
