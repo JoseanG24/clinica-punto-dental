@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 // Iconos
 import { FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,7 +85,11 @@ const AboutSection = () => {
             Ubicación
           </h2>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.7927445547332!2d-90.47129676508176!3d14.522422300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a4e0e5d1670f%3A0x4bf8387a674eee34!2sGGCH%2BXJ6%2C%20Unnamed%20Road%2C%20San%20Jorge%20Muxbal!5e0!3m2!1ses-419!2sgt!4v1725574780010!5m2!1ses-419!2sgt"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.242577978288!2d-90.46880928808582!3d14.522055803759368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a568a87d0163%3A0x14597b98274de022!2sMinuto%20Carretera%20a%20El%20Salvador!5e1!3m2!1ses-419!2sgt!4v1737937632620!5m2!1ses-419!2sgt"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
             className="w-full h-full rounded-lg shadow-lg"
             style={{ border: 0 }}
             loading="lazy"
@@ -103,6 +108,7 @@ const AboutSection = () => {
               width={900}
               height={900}
               className="about-image rounded-lg shadow-lg w-full"
+              loading="lazy"
             />
           </div>
           <p className="about-description text-base md:text-lg mb-6">
@@ -112,7 +118,13 @@ const AboutSection = () => {
             pacientes. Nuestro equipo se mantiene en constante actualización a
             través de cursos y programas especializados para ofrecer aún más
             servicios con la más alta calidad. Nuestro compromiso es mejorar tu
-            salud bucal y brindarte la mejor experiencia posible.
+            salud bucal y brindarte la mejor experiencia posible.{" "}
+            <Link href="/#servicios">
+              <button className="text-blue-300 hover:underline">
+                Conoce nuestros servicios
+              </button>
+            </Link>
+            .
           </p>
           <div className="about-info space-y-6">
             <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md">
@@ -126,7 +138,7 @@ const AboutSection = () => {
               <li>Periodoncia</li>
             </ul>
 
-            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md flex items-center gap-2">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md items-center gap-2">
               Contacto
             </h3>
             <p className="text-base md:text-lg flex items-center gap-2">
@@ -138,11 +150,13 @@ const AboutSection = () => {
               <strong>Email:</strong> puntodentalgt@gmail.com
             </p>
 
-            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md flex items-center gap-2">
-              Horario de Atención
-            </h3>
             <p className="text-base md:text-lg font-semibold flex items-center gap-2">
-              <FaClock /> Lunes a Viernes: 8:30 AM - 6:00 PM
+              <FaClock />{" "}
+              <Link href="/#cita">
+                <button className="text-blue-300 hover:underline">
+                  Lunes a Viernes: 8:30 AM - 6:00 PM
+                </button>
+              </Link>
             </p>
             <p className="text-base md:text-lg font-semibold flex items-center gap-2">
               <FaClock /> Sábado: 9:00 AM - 12:00 PM

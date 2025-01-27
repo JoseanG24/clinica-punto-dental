@@ -19,9 +19,9 @@ const HeroSection = () => {
         style={{ backgroundImage: "url('/images/heromobile.jpg')" }}
       >
         <div className="container mx-auto p-5 bg-black bg-opacity-40 text-white text-center max-w-xl shadow-lg">
-          <h1 className="text-4xl text-left font-bold mb-4">
+          <h2 className="text-4xl text-left font-bold mb-4">
             Tu Sonrisa Perfecta Empieza Aquí
-          </h1>
+          </h2>
           <p className="text-lg mb-6 text-left">+20 años cuidando tu sonrisa</p>
           <a
             href="https://wa.me/50252084159"
@@ -61,7 +61,7 @@ const HeroSection = () => {
               href="https://wa.me/50252084159"
               className="inline-block px-8 py-4 rounded-xl bg-blue-500 text-white font-bold shadow-lg transition-transform hover:scale-110 hover:bg-blue-700"
             >
-              Agenda tu primera consulta gratis hoy
+              Agenda tu primera consulta hoy
             </a>
           </div>
         </div>
