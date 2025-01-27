@@ -79,17 +79,13 @@ const AboutSection = () => {
   return (
     <section className="relative bg-[#05192e] text-[#f3f3f3] py-20">
       <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4 md:px-0">
-        {/* Mapa para pantallas grandes */}
-        <div className="hidden md:block w-full md:ml-20 md:w-1/2 md:sticky md:top-44 h-96 mb-12">
+        {/* Mapa para todas las pantallas */}
+        <div className="w-full md:ml-20 md:w-1/2 md:sticky md:top-44 h-96 mb-12">
           <h2 className="font-bold text-lg bg-[#1e3a8a] text-white px-4 py-2 mb-2 rounded-md inline-block">
             Ubicación
           </h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.242577978288!2d-90.46880928808582!3d14.522055803759368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a568a87d0163%3A0x14597b98274de022!2sMinuto%20Carretera%20a%20El%20Salvador!5e1!3m2!1ses-419!2sgt!4v1737937632620!5m2!1ses-419!2sgt"
-            width="600"
-            height="450"
-            allowfullscreen=""
-            referrerpolicy="no-referrer-when-downgrade"
             className="w-full h-full rounded-lg shadow-lg"
             style={{ border: 0 }}
             loading="lazy"
@@ -118,7 +114,7 @@ const AboutSection = () => {
             pacientes. Nuestro equipo se mantiene en constante actualización a
             través de cursos y programas especializados para ofrecer aún más
             servicios con la más alta calidad. Nuestro compromiso es mejorar tu
-            salud bucal y brindarte la mejor experiencia posible.{" "}
+            salud bucal y brindarte la mejor experiencia posible.{' '}
             <Link href="/#servicios">
               <button className="text-blue-300 hover:underline">
                 Conoce nuestros servicios
@@ -138,7 +134,7 @@ const AboutSection = () => {
               <li>Periodoncia</li>
             </ul>
 
-            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md items-center gap-2">
+            <h3 className="text-xl md:text-2xl font-semibold bg-[#1e3a8a] text-white px-4 py-2 inline-block rounded-md flex items-center gap-2">
               Contacto
             </h3>
             <p className="text-base md:text-lg flex items-center gap-2">
@@ -151,7 +147,7 @@ const AboutSection = () => {
             </p>
 
             <p className="text-base md:text-lg font-semibold flex items-center gap-2">
-              <FaClock />{" "}
+              <FaClock />{' '}
               <Link href="/#cita">
                 <button className="text-blue-300 hover:underline">
                   Lunes a Viernes: 8:30 AM - 6:00 PM
