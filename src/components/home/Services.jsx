@@ -89,25 +89,24 @@ const ServicesGrid = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {services.map((service, index) => (
             // <Link href={`/servicios/${service.id}`} key={service.id} passHref>
-              <button
-                ref={addToRefs}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-default   hover:shadow-2xl"
+            <button
+              key={index}
+              ref={addToRefs}
+              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-default   hover:shadow-2xl"
+            >
+              <div
+                className="w-full h-48 bg-center bg-cover transition-opacity duration-300 hover:opacity-80"
+                style={{ backgroundImage: `url(${service.image})` }}
               >
-                <div
-                  className="w-full h-48 bg-center bg-cover transition-opacity duration-300 hover:opacity-80"
-                  style={{ backgroundImage: `url(${service.image})` }}
-                >
-                  {/* Optional overlay for text readability */}
-                  <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-end p-4">
-                    <h3 className="text-xl font-bold text-white">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-gray-300">
-                      {service.description}
-                    </p>
-                  </div>
+                {/* Optional overlay for text readability */}
+                <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-end p-4">
+                  <h3 className="text-xl font-bold text-white">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-300">{service.description}</p>
                 </div>
-              </button>
+              </div>
+            </button>
             // </Link>
           ))}
         </div>

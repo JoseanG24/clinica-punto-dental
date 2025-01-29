@@ -15,10 +15,13 @@ const HeroSection = () => {
     <>
       {/* Sección visible solo en móviles */}
       <section
-        className="md:hidden hero-section pt-44 bg-cover bg-center min-h-screen flex flex-col items-center"
-        style={{ backgroundImage: "url('/images/heromobile.jpg')" }}
+        className="relative md:hidden hero-section pt-44 bg-cover bg-center min-h-screen flex flex-col items-center"
+        style={{ backgroundImage: "url('/mobilehero.webp')" }}
       >
-        <div className="container mx-auto p-5 bg-black bg-opacity-40 text-white text-center max-w-xl shadow-lg">
+        {/* Filtro oscuro */}
+        <div className="absolute inset-0 bg-black opacity-30"></div>
+
+        <div className="container top-44 relative mx-auto p-5 text-white text-center max-w-xl">
           <h2 className="text-4xl text-left font-bold mb-4">
             Tu Sonrisa Perfecta Empieza Aquí
           </h2>
