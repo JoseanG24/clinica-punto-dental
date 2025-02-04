@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Clínica Punto Dental",
     images: [
       {
-        url: "https://puntodentalguate.com/iconlogo.jpg",
+        url: "https://puntodentalguate.com/logos/iconlogo.jpg",
         width: 800,
         height: 600,
         alt: "Clínica Punto Dental en Carretera a El Salvador",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
     description:
       "Clínica dental en Carretera a El Salvador que ofrece odontología general, ortodoncia, implantes dentales, y estética dental.",
-    images: ["https://puntodentalguate.com/iconlogo.jpg"],
+    images: ["https://puntodentalguate.com/logos/iconlogo.jpg"],
   },
 };
 
