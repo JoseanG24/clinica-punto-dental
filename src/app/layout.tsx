@@ -6,8 +6,6 @@ import Navbar from "@/components/helper/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"] });
-
 // Metadata para SEO
 export const metadata: Metadata = {
   metadataBase: new URL("https://puntodentalguate.com"),
@@ -19,7 +17,7 @@ export const metadata: Metadata = {
     "Odontología en Guatemala",
     "Ortodoncia Guatemala",
     "Implantes dentales Guatemala",
-    "Estética dental Guatemala",
+    "Blanqueamiento dental Guatemala",
     "Periodoncia Guatemala",
   ],
   title: {
@@ -27,7 +25,7 @@ export const metadata: Metadata = {
     template: `%s | Clínica Punto Dental`,
   },
   description:
-    "Clínica dental en Carretera a El Salvador. Ofrecemos servicios de odontología general, ortodoncia, implantes dentales, estética dental y periodoncia.",
+    "En Clínica Punto Dental ofrecemos servicios especializados de odontología en Carretera a El Salvador. Contamos con tratamientos personalizados en ortodoncia, implantes, estética dental, y más, con tecnología moderna y expertos en salud bucal.",
   openGraph: {
     title: "Clínica Punto Dental - Dentista en Carretera a El Salvador",
     description:

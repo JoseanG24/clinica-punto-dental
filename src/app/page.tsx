@@ -22,6 +22,7 @@ const HomePage = () => {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Clínica Punto Dental",
+    "dateModified": "2025-02-05",
     "image": "https://puntodentalguate.com/images/imgclinica1.png",
     "description": "Clínica dental en Carretera a El Salvador que ofrece servicios de odontología general, ortodoncia, implantes dentales y estética dental en Guatemala.",
     "address": {
