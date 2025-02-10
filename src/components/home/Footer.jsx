@@ -48,7 +48,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#contacto" className="hover:underline">
+              <a href="#cita" className="hover:underline">
                 Contacto
               </a>
             </li>
@@ -72,7 +72,7 @@ const Footer = () => {
           </ul>
           <div className="mt-6 flex space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/puntodentalgt"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center bg-blue-600 rounded-full hover:bg-blue-500 transition"
@@ -80,7 +80,7 @@ const Footer = () => {
               <FaFacebookF className="text-white text-lg" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/puntodentalguate/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-pink-500 to-orange-400 rounded-full hover:opacity-80 transition"
