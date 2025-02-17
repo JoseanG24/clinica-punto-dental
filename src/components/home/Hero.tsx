@@ -25,12 +25,15 @@ const HeroSection = () => {
           <h2 className="text-4xl text-left font-bold mb-4">
             Tu Sonrisa Perfecta Empieza Aquí
           </h2>
-          <p className="text-lg mb-6 text-left">+20 años cuidando tu sonrisa</p>
+          <p className="text-lg mb-6 text-left">
+            Expertos en Ortodoncia, Implantes y Estética Dental con más de 20
+            años de experiencia.
+          </p>
           <a
             href="https://wa.me/50252084159"
             className="inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg transition-transform hover:scale-110 hover:bg-blue-700"
           >
-            Agenda tu primera cita
+            Agenda tu primera consulta hoy
           </a>
         </div>
       </section>
@@ -54,11 +57,12 @@ const HeroSection = () => {
         {/* Contenido superpuesto */}
         <div className="container mx-auto p-5 text-gray-800 relative z-10">
           <div className="hero-content max-w-xl">
-            <h1 className="text-6xl font-bold mb-4 text-white">
+            <h2 className="text-6xl font-bold mb-4 text-white">
               Tu Sonrisa Perfecta Empieza Aquí
-            </h1>
+            </h2>
             <p className="text-xl mb-6 text-gray-200">
-              Más de 20 años de experiencia +
+              Expertos en Ortodoncia, Implantes y Estética Dental con más de 20
+              años de experiencia.
             </p>
             <a
               href="https://wa.me/50252084159"

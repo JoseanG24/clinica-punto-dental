@@ -36,3 +36,12 @@
   /* scrollbar-width: auto;
      scrollbar-color: #F59E0B #222; */
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Para IE y Edge */
+  scrollbar-width: none; /* Para Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Para Chrome, Safari y Opera */
+}

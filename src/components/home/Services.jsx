@@ -1,10 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-// import Link from "next/link";
-
-gsap.registerPlugin(ScrollTrigger);
+import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FaTooth, FaSmile, FaTeeth, FaMagic, FaStethoscope } from "react-icons/fa"; // Íconos de FontAwesome
 
 // Datos de los servicios
 const services = [
@@ -51,65 +49,83 @@ const services = [
 ];
 
 const ServicesGrid = () => {
-  const cardsRef = useRef([]);
-  cardsRef.current = [];
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  const addToRefs = (el) => {
-    if (el && !cardsRef.current.includes(el)) {
-      cardsRef.current.push(el);
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
     }
+  }, [controls, inView]);
+
+  // Variantes para animaciones
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
   };
 
-  useEffect(() => {
-    cardsRef.current.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { autoAlpha: 0, y: 100 },
-        {
-          duration: 0.9,
-          autoAlpha: 1,
-          y: 0,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=200",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-  }, []);
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    hover: { scale: 1.05, boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)" },
+  };
 
   return (
-    <section className="bg-[#05192e] pt-32 pb-80 md:pb-20">
+    <section className="bg-[#05192e] py-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-6xl font-bold text-center text-white mb-8">
+        <motion.h2
+          className="text-6xl font-bold text-center text-white mb-16"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           Nuestros Servicios
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        </motion.h2>
+        <motion.div
+          ref={ref}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={controls}
+        >
           {services.map((service, index) => (
-            // <Link href={`/servicios/${service.id}`} key={service.id} passHref>
-            <button
+            <motion.div
               key={index}
-              ref={addToRefs}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-default   hover:shadow-2xl"
+              variants={cardVariants}
+              whileHover="hover"
+              className="relative cursor-default bg-white rounded-xl overflow-hidden shadow-2xl transform transition-all duration-300 group"
             >
               <div
-                className="w-full h-48 bg-center bg-cover transition-opacity duration-300 hover:opacity-80"
+                className="w-full h-64 bg-center bg-cover"
                 style={{ backgroundImage: `url(${service.image})` }}
               >
-                {/* Optional overlay for text readability */}
-                <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-end p-4">
-                  <h3 className="text-xl font-bold text-white">
+                <div className="w-full h-full bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-all duration-300 group-hover:bg-opacity-60">
+                  <motion.h2
+                    className="text-3xl font-bold text-white mb-2"
+                    whileHover={{ scale: 1.05 }}
+                  >
                     {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-300">{service.description}</p>
+                  </motion.h2>
+                  <motion.p
+                    className="text-lg text-gray-200"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    {service.description}
+                  </motion.p>
                 </div>
               </div>
-            </button>
-            // </Link>
+              <div className="absolute top-4 right-4 bg-white rounded-full w-4 h-4 flex items-center justify-center text-2xl shadow-lg">
+                {service.icon} {/* Ícono profesional */}
+              </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
