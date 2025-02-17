@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 // Iconos
-import { FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -90,6 +90,13 @@ const AboutSection = () => {
             style={{ border: 0 }}
             loading="lazy"
           ></iframe>
+          {/* Dirección textual para SEO */}
+          <address className="mt-4 text-base md:text-lg flex items-center gap-2">
+            <FaMapMarkerAlt className="text-blue-300" />
+            <span>
+              Km 19.5 Carretera a El Salvador, Tecniscan Plaza Minuto, Clínica 6
+            </span>
+          </address>
         </div>
 
         {/* Información de la Clínica */}

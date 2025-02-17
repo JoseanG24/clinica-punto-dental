@@ -67,7 +67,7 @@ const Footer = () => {
             </li>
             <li>
               <span className="font-bold">Dirección:</span> Km 19.5 Carretera a
-              El Salvador, Tecniscan Plaza Minuto, Clínica 6 Ciudad Digital
+              El Salvador, Tecniscan Plaza Minuto, Clínica 6
             </li>
           </ul>
           <div className="mt-6 flex space-x-4">
