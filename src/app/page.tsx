@@ -21,6 +21,7 @@ const Personal = dynamic(() => import("@/components/home/Gallery"), {
 const FAQSection = dynamic(() => import("@/components/home/FAQ"), {
   ssr: false,
 });
+const Posts = dynamic(() => import("@/components/home/Posts"), { ssr: false });
 
 const HomePage = () => {
   // Datos estructurados para la clínica dental
@@ -137,6 +138,9 @@ const HomePage = () => {
         {/* Estos componentes se cargan diferidos para mejorar el rendimiento */}
         <div id="cita" aria-label="agendar una cita">
           <Appointment />
+        </div>
+        <div>
+          <Posts />
         </div>
         {/* <Gallery /> */}
         <Personal />

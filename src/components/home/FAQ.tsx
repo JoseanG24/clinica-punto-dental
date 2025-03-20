@@ -15,10 +15,10 @@ const faqData = [
     question: "¿Cómo puedo agendar una cita?",
     answer: "Puedes agendar una cita fácilmente llamando a nuestro número de contacto o utilizando nuestro sistema en línea disponible en la página de contacto.",
   },
-  {
-    question: "¿Aceptan seguros dentales?",
-    answer: "Sí, aceptamos la mayoría de los seguros dentales. Te recomendamos que nos contactes para confirmar la cobertura de tu plan.",
-  },
+  // {
+  //   question: "¿Aceptan seguros dentales?",
+  //   answer: "Sí, aceptamos la mayoría de los seguros dentales. Te recomendamos que nos contactes para confirmar la cobertura de tu plan.",
+  // },
   {
     question: "¿Cuánto dura un tratamiento de ortodoncia?",
     answer: "El tiempo del tratamiento varía según el caso del paciente, pero en promedio puede durar entre 12 y 24 meses.",
