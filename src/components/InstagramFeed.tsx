@@ -37,7 +37,7 @@ function InstagramIcon({ className }: { className?: string }) {
 
 function EmbedCard({ url }: { url: string }) {
   return (
-    <div className="ig-card rounded-2xl overflow-hidden w-full flex flex-col shadow-[0_2px_24px_rgba(15,32,68,0.08)]">
+    <div className="ig-card rounded-2xl overflow-hidden w-full flex flex-col shadow-[0_2px_24px_rgba(15,32,68,0.08)] min-h-135">
 
       {/* Embed de Instagram — el script lo convierte en iframe; su interior no es estilizable */}
       <blockquote

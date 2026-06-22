@@ -4,36 +4,36 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    name: "Odontologia General",
-    desc: "Limpieza, diagnostico y tratamiento preventivo para mantener tu salud bucal en optimas condiciones.",
+    name: "Odontología General",
+    desc: "Limpieza, diagnóstico y tratamiento preventivo para mantener tu salud bucal en óptimas condiciones.",
     image:
       "https://plus.unsplash.com/premium_photo-1674179075488-7bbe91dba99a?w=900&auto=format&fit=crop&q=80",
     span: "lg:col-span-2",
   },
   {
     name: "Ortodoncia",
-    desc: "Brackets y alineadores para corregir la posicion de tus dientes y obtener una sonrisa perfectamente alineada.",
+    desc: "Brackets y alineadores para corregir la posición de tus dientes y obtener una sonrisa perfectamente alineada.",
     image:
       "https://images.unsplash.com/photo-1598531228433-d9f0cb960816?w=700&auto=format&fit=crop&q=80",
     span: "",
   },
   {
     name: "Implantes Dentales",
-    desc: "Restauracion permanente y natural de piezas dentales perdidas con implantes de titanio de alta calidad.",
+    desc: "Restauración permanente y natural de piezas dentales perdidas con implantes de titanio de alta calidad.",
     image:
       "https://images.unsplash.com/photo-1684607632829-1e5bf4f21dab?w=700&auto=format&fit=crop&q=80",
     span: "",
   },
   {
-    name: "Estetica Dental",
-    desc: "Blanqueamiento, carillas y tratamientos cosmeticos para transformar tu sonrisa.",
+    name: "Estética Dental",
+    desc: "Blanqueamiento, carillas y tratamientos cosméticos para transformar tu sonrisa.",
     image:
       "https://plus.unsplash.com/premium_photo-1702598988008-b60cf858cb78?w=700&auto=format&fit=crop&q=80",
     span: "",
   },
   {
-    name: "Cirugia Maxilofacial",
-    desc: "Extraccion de cordales, cirugia de tejidos blandos y procedimientos quirurgicos avanzados con maxima seguridad y recuperacion rapida.",
+    name: "Cirugía Maxilofacial",
+    desc: "Extracción de cordales, cirugía de tejidos blandos y procedimientos quirúrgicos avanzados con máxima seguridad y recuperación rápida.",
     image:
       "https://plus.unsplash.com/premium_photo-1674998805052-23ea88091da2?w=900&auto=format&fit=crop&q=80",
     span: "lg:col-span-2",
@@ -90,12 +90,14 @@ export default function Services() {
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               className={`group relative rounded-2xl overflow-hidden ${s.span} min-h-[280px] md:min-h-[320px]`}
             >
-              {/* Background image */}
+              {/* Background image — decorative, described by the visible h3 below */}
               <div
+                role="img"
+                aria-label={`Servicio de ${s.name} en Punto Dental Guatemala`}
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: `url('${s.image}')` }}
               />
-              {/* Solid dark overlay */}
+              {/* Overlay */}
               <div className="absolute inset-0 bg-[#0F2044]/65 group-hover:bg-[#0F2044]/75 transition-colors duration-300" />
 
               {/* Content */}

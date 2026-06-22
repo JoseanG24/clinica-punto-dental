@@ -107,6 +107,8 @@ export default function Gallery() {
             >
               {/* Imagen */}
               <div
+                role="img"
+                aria-label={item.alt}
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
                 style={{ backgroundImage: `url('${item.src}')` }}
               />

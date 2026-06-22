@@ -8,8 +8,7 @@ export default function Hero() {
       id="inicio"
       className="relative min-h-screen flex items-center"
       style={{
-        backgroundImage:
-          "url('/fondohero.webp')",
+        backgroundImage: "url('/fondohero.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center top",
       }}
@@ -24,39 +23,42 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#93B4F0] text-xs font-semibold tracking-[0.2em] uppercase mb-8"
           >
-            Clinica Dental — Guatemala
+            Clínica Dental — Guatemala
           </motion.p>
 
-          <div className="overflow-hidden mb-3">
-            <motion.h1
-              initial={{ y: 80 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.75, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[clamp(3rem,7vw,5.5rem)] font-bold text-white leading-[1.02] tracking-tight"
-            >
-              Tu Sonrisa
-            </motion.h1>
-          </div>
-          <div className="overflow-hidden mb-3">
-            <motion.h1
-              initial={{ y: 80 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.75, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[clamp(3rem,7vw,5.5rem)] font-bold text-white leading-[1.02] tracking-tight"
-            >
-              Perfecta
-            </motion.h1>
-          </div>
-          <div className="overflow-hidden mb-10">
-            <motion.h1
-              initial={{ y: 80 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.75, delay: 0.54, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[clamp(3rem,7vw,5.5rem)] font-bold text-white leading-[1.02] tracking-tight"
-            >
-              Empieza Aqui
-            </motion.h1>
-          </div>
+          {/* Single H1 containing all animated lines — fixes the 3× H1 SEO issue */}
+          <h1 className="text-[clamp(3rem,7vw,5.5rem)] font-bold text-white leading-[1.02] tracking-tight">
+            <span className="block overflow-hidden mb-3">
+              <motion.span
+                initial={{ y: 80 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.75, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="block"
+              >
+                Tu Sonrisa
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden mb-3">
+              <motion.span
+                initial={{ y: 80 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.75, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
+                className="block"
+              >
+                Perfecta
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden mb-10">
+              <motion.span
+                initial={{ y: 80 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.75, delay: 0.54, ease: [0.22, 1, 0.36, 1] }}
+                className="block"
+              >
+                Empieza Aquí
+              </motion.span>
+            </span>
+          </h1>
 
           <motion.p
             initial={{ opacity: 0 }}
@@ -64,8 +66,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.7 }}
             className="text-white/60 text-base md:text-lg mb-10 max-w-[420px] leading-relaxed"
           >
-            Expertos en Ortodoncia, Implantes y Estetica Dental con mas de 20 anos de
-            experiencia en Guatemala.
+            Expertos en Ortodoncia, Implantes y Estética Dental con más de 20
+            años de experiencia en Guatemala.
           </motion.p>
 
           <motion.div

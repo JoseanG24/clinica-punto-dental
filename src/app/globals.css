@@ -23,3 +23,11 @@ body {
   background: #0F2044;
   border-radius: 100px;
 }
+
+/* Used by Testimonials.tsx */
+.text-gradient {
+  background: linear-gradient(135deg, #2563EB 0%, #3B7BF6 50%, #60A5FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

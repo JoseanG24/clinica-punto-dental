@@ -5,27 +5,27 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    q: "Ofrecen consulta de evaluacion gratuita?",
-    a: "Si. La primera consulta de evaluacion es completamente gratuita. En esa visita revisamos tu salud bucal y te presentamos un plan de tratamiento personalizado.",
+    q: "¿Ofrecen consulta de evaluación gratuita?",
+    a: "Sí. La primera consulta de evaluación es completamente gratuita. En esa visita revisamos tu salud bucal y te presentamos un plan de tratamiento personalizado.",
   },
   {
-    q: "Cuales son sus horarios de atencion?",
-    a: "Atendemos de lunes a viernes de 8:30 a 18:00 y los sabados de 9:00 a 12:00. Los domingos permanecemos cerrados.",
+    q: "¿Cuáles son sus horarios de atención?",
+    a: "Atendemos de lunes a viernes de 8:30 a 18:00 y los sábados de 9:00 a 12:00. Los domingos permanecemos cerrados.",
   },
   {
-    q: "Donde estan ubicados?",
-    a: "Nos encontramos en el Km 19.5 de la Carretera a El Salvador, Tecniscan Plaza Minuto, Clinica 6, Guatemala.",
+    q: "¿Dónde están ubicados?",
+    a: "Nos encontramos en el Km 19.5 de la Carretera a El Salvador, Tecniscan Plaza Minuto, Clínica 6, Guatemala.",
   },
   {
-    q: "Que especialidades manejan?",
-    a: "Contamos con Odontologia General, Ortodoncia, Implantes Dentales, Estetica Dental y Periodoncia. Todo bajo un mismo techo.",
+    q: "¿Qué especialidades manejan?",
+    a: "Contamos con Odontología General, Ortodoncia, Implantes Dentales, Estética Dental y Periodoncia. Todo bajo un mismo techo.",
   },
   {
-    q: "Atienden emergencias dentales?",
-    a: "Si. Si tienes un dolor agudo, fractura o cualquier urgencia dental, escribenos por WhatsApp al +502 5208 4159 y te atendemos a la brevedad, incluso fuera del horario regular.",
+    q: "¿Atienden emergencias dentales?",
+    a: "Sí. Si tienes un dolor agudo, fractura o cualquier urgencia dental, escríbenos por WhatsApp al +502 5208 4159 y te atendemos a la brevedad, incluso fuera del horario regular.",
   },
   {
-    q: "Como puedo agendar una cita?",
+    q: "¿Cómo puedo agendar una cita?",
     a: "Puedes contactarnos directamente por WhatsApp al +502 5208 4159. Te respondemos a la brevedad.",
   },
 ];
@@ -43,6 +43,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
     >
       <button
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         className="w-full flex items-center justify-between py-5 text-left gap-4 group"
       >
         <span
@@ -112,9 +113,18 @@ export default function FAQ() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-[#6B7280] text-sm leading-relaxed mb-8"
+              className="text-[#6B7280] text-sm leading-relaxed mb-3"
             >
               Si tienes alguna otra consulta, no dudes en escribirnos directamente.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.25 }}
+              className="text-[#9CA3AF] text-xs mb-8"
+            >
+              Actualizado: junio 2026
             </motion.p>
             <motion.a
               initial={{ opacity: 0, y: 12 }}
