@@ -101,6 +101,11 @@ const localBusinessSchema = {
     addressRegion: "Guatemala",
     addressCountry: "GT",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 14.5372,
+    longitude: -90.4613,
+  },
   hasMap: "https://maps.google.com/?q=Tecniscan+Plaza+Minuto+Guatemala",
   openingHoursSpecification: [
     {
@@ -234,7 +239,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${dmSans.variable} scroll-smooth`}>
+    <html lang="es-GT" className={`${dmSans.variable} scroll-smooth`}>
       <head>
         {/* Preload hero background — true LCP element for this page */}
         <link rel="preload" as="image" href="/fondohero.webp" fetchPriority="high" />
